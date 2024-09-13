@@ -1,5 +1,9 @@
 # TreeView
 
+[![Pub Version](https://img.shields.io/pub/v/treeview?color=blue&logo=dart)](https://pub.dev/packages/treeview)
+[![Pub Points](https://img.shields.io/pub/points/treeview?color=blue&logo=dart)](https://pub.dev/packages/treeview)
+[![License](https://img.shields.io/github/license/monkeyWie/flutter_treeview)](https://github.com/monkeyWie/flutter_treeview/blob/main/LICENSE)
+
 A customizable and feature-rich tree view widget for Flutter.
 
 ## Screenshot
