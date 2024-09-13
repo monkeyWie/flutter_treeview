@@ -1,7 +1,7 @@
-# TreeView
+# Checkable TreeView
 
-[![Pub Version](https://img.shields.io/pub/v/treeview?color=blue&logo=dart)](https://pub.dev/packages/treeview)
-[![Pub Points](https://img.shields.io/pub/points/treeview?color=blue&logo=dart)](https://pub.dev/packages/treeview)
+[![Pub Version](https://img.shields.io/pub/v/checkable_treeview?color=blue&logo=dart)](https://pub.dev/packages/checkable_treeview)
+[![Pub Points](https://img.shields.io/pub/points/checkable_treeview?color=blue&logo=dart)](https://pub.dev/packages/checkable_treeview)
 [![License](https://img.shields.io/github/license/monkeyWie/flutter_treeview)](https://github.com/monkeyWie/flutter_treeview/blob/main/LICENSE)
 
 A checkable and customizable tree view widget for Flutter.
