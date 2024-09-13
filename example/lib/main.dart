@@ -43,47 +43,55 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     _nodes = [
       TreeNode(
-        label: 'Project Folder',
+        label: const Text('Project Folder'),
         value: 'project_folder',
         children: [
           TreeNode(
-            label: 'src',
+            label: const Text('src'),
             icon: Icons.folder_open,
             children: [
               TreeNode(
-                  label: 'main.js',
+                  label: const Text('main.js'),
                   value: 'main_js',
                   icon: Icons.javascript,
                   isSelected: true),
               TreeNode(
-                  label: 'app.js', value: 'app_js', icon: Icons.javascript),
+                  label: const Text('app.js'),
+                  value: 'app_js',
+                  icon: Icons.javascript),
               TreeNode(
-                  label: 'styles.css', value: 'styles_css', icon: Icons.css),
+                  label: const Text('styles.css'),
+                  value: 'styles_css',
+                  icon: Icons.css),
             ],
           ),
           TreeNode(
-            label: 'public',
+            label: const Text('public'),
             value: 'public_folder',
             icon: Icons.folder_open,
             children: [
               TreeNode(
-                  label: 'index.html', value: 'index_html', icon: Icons.html),
+                  label: const Text('index.html'),
+                  value: 'index_html',
+                  icon: Icons.html),
               TreeNode(
-                  label: 'favicon.ico', value: 'favicon', icon: Icons.image),
+                  label: const Text('favicon.ico'),
+                  value: 'favicon',
+                  icon: Icons.image),
             ],
           ),
         ],
       ),
       TreeNode(
-        label: 'Config Files',
+        label: const Text('Config Files'),
         value: 'config_folder',
         children: [
           TreeNode(
-              label: 'package.json',
+              label: const Text('package.json'),
               value: 'package_json',
               icon: Icons.settings),
           TreeNode(
-              label: '.gitignore',
+              label: const Text('.gitignore'),
               value: 'gitignore',
               icon: Icons.remove_red_eye),
         ],
@@ -99,7 +107,8 @@ class _MyHomePageState extends State<MyHomePage> {
     if (_searchKeyword.isEmpty) {
       return true;
     }
-    return node.label.toLowerCase().contains(_searchKeyword.toLowerCase());
+    return node.value?.toLowerCase().contains(_searchKeyword.toLowerCase()) ??
+        false;
   }
 
   void _performSearch() {
@@ -119,10 +128,12 @@ class _MyHomePageState extends State<MyHomePage> {
           _treeViewKey.currentState?.sort(null);
           break;
         case SortOrder.ascending:
-          _treeViewKey.currentState?.sort((a, b) => a.label.compareTo(b.label));
+          _treeViewKey.currentState
+              ?.sort((a, b) => (a.value ?? '').compareTo(b.value ?? ''));
           break;
         case SortOrder.descending:
-          _treeViewKey.currentState?.sort((a, b) => b.label.compareTo(a.label));
+          _treeViewKey.currentState
+              ?.sort((a, b) => (b.value ?? '').compareTo(a.value ?? ''));
           break;
       }
     });

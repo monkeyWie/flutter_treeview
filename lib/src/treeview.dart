@@ -26,10 +26,10 @@ part 'treeview_state.dart';
 /// TreeView<String>(
 ///   nodes: [
 ///     TreeNode(
-///       label: 'Root',
+///       label: const Text('Root'),
 ///       children: [
-///         TreeNode(label: 'Child 1'),
-///         TreeNode(label: 'Child 2'),
+///         TreeNode(label: const Text('Child 1'), value: 'child1'),
+///         TreeNode(label: const Text('Child 2'), value: 'child2'),
 ///       ],
 ///     ),
 ///   ],

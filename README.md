@@ -51,12 +51,12 @@ class MyApp extends StatelessWidget {
         body: TreeView<String>(
           nodes: [
             TreeNode(
-              label: 'Root',
+              label: const Text('Root'),
               value: 'root',
               icon: Icons.folder,
               children: [
-                TreeNode(label: 'Child 1', value: 'child1'),
-                TreeNode(label: 'Child 2', value: 'child2'),
+                TreeNode(label: const Text('Child 1'), value: 'child1'),
+                TreeNode(label: const Text('Child 2'), value: 'child2'),
               ],
             ),
           ],

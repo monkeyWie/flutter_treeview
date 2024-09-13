@@ -9,8 +9,8 @@ part of 'treeview.dart';
 /// The type parameter [T] represents the type of the [value] associated
 /// with this node.
 class TreeNode<T> {
-  /// The label text displayed for this node.
-  final String label;
+  /// The label widget displayed for this node.
+  final Widget label;
 
   /// An optional value associated with this node.
   final T? value;
@@ -52,7 +52,7 @@ class TreeNode<T> {
 
   /// Creates a [TreeNode].
   ///
-  /// The [label] parameter is required and specifies the text to display for this node.
+  /// The [label] parameter is required and specifies the widget to display for this node.
   ///
   /// The [value] parameter is an optional value associated with this node.
   ///
@@ -62,7 +62,7 @@ class TreeNode<T> {
   ///
   /// The [children] parameter is an optional list of child nodes.
   factory TreeNode({
-    required String label,
+    required Widget label,
     T? value,
     IconData? icon,
     bool isSelected = false,

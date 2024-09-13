@@ -250,7 +250,7 @@ class TreeViewState<T> extends State<TreeView<T>> {
                   ),
                   if (node.icon != null) Icon(node.icon),
                   const SizedBox(width: 4),
-                  Expanded(child: Text(node.label)),
+                  Expanded(child: node.label),
                 ],
               ),
             ),

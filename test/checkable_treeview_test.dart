@@ -8,17 +8,17 @@ void main() {
     // Create test node data
     final testNodes = [
       TreeNode<String>(
-        label: 'Root 1',
+        label: const Text('Root 1'),
         children: [
-          TreeNode<String>(label: 'Child 1.1'),
-          TreeNode<String>(label: 'Child 1.2'),
+          TreeNode<String>(label: const Text('Child 1.1')),
+          TreeNode<String>(label: const Text('Child 1.2')),
         ],
       ),
       TreeNode<String>(
-        label: 'Root 2',
+        label: const Text('Root 2'),
         children: [
-          TreeNode<String>(label: 'Child 2.1'),
-          TreeNode<String>(label: 'Child 2.2'),
+          TreeNode<String>(label: const Text('Child 2.1')),
+          TreeNode<String>(label: const Text('Child 2.2')),
         ],
       ),
     ];
@@ -58,19 +58,19 @@ void main() {
     // Create test node data with values
     final testNodes = [
       TreeNode<String>(
-        label: 'Root 1',
+        label: const Text('Root 1'),
         value: 'value1',
         children: [
-          TreeNode<String>(label: 'Child 1.1', value: 'value1.1'),
-          TreeNode<String>(label: 'Child 1.2', value: 'value1.2'),
+          TreeNode<String>(label: const Text('Child 1.1'), value: 'value1.1'),
+          TreeNode<String>(label: const Text('Child 1.2'), value: 'value1.2'),
         ],
       ),
       TreeNode<String>(
-        label: 'Root 2',
+        label: const Text('Root 2'),
         value: 'value2',
         children: [
-          TreeNode<String>(label: 'Child 2.1', value: 'value2.1'),
-          TreeNode<String>(label: 'Child 2.2', value: 'value2.2'),
+          TreeNode<String>(label: const Text('Child 2.1'), value: 'value2.1'),
+          TreeNode<String>(label: const Text('Child 2.2'), value: 'value2.2'),
         ],
       ),
     ];
