@@ -1,5 +1,5 @@
-name: treeview
-description: A customizable and feature-rich tree view widget for Flutter.
+name: checkable_treeview
+description: A checkable and customizable tree view widget for Flutter.
 version: 0.0.1
 homepage: https://github.com/monkeyWie/flutter_treeview
 

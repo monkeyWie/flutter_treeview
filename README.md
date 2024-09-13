@@ -4,7 +4,7 @@
 [![Pub Points](https://img.shields.io/pub/points/treeview?color=blue&logo=dart)](https://pub.dev/packages/treeview)
 [![License](https://img.shields.io/github/license/monkeyWie/flutter_treeview)](https://github.com/monkeyWie/flutter_treeview/blob/main/LICENSE)
 
-A customizable and feature-rich tree view widget for Flutter.
+A checkable and customizable tree view widget for Flutter.
 
 ## Screenshot
 
@@ -25,7 +25,7 @@ A customizable and feature-rich tree view widget for Flutter.
 To use the TreeView widget in your Flutter project, follow these steps:
 
 ```
-flutter pub add treeview
+flutter pub add checkable_treeview
 ```
 
 ## Usage
@@ -34,7 +34,7 @@ Here's a basic example of how to use the TreeView widget:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:treeview/treeview.dart';
+import 'package:checkable_treeview/checkable_treeview.dart';
 
 void main() {
   runApp(MyApp());

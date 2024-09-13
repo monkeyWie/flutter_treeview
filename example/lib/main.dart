@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:treeview/treeview.dart';
+import 'package:checkable_treeview/checkable_treeview.dart';
 
 void main() {
   runApp(const MyApp());

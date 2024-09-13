@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:treeview/treeview.dart';
+import 'package:checkable_treeview/checkable_treeview.dart';
 
 void main() {
   testWidgets('TreeView initializes with correct number of nodes',
