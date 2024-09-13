@@ -237,7 +237,7 @@ class TreeViewState<T> extends State<TreeView<T>> {
                       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
                   ),
-                  Icon(node.icon),
+                  if (node.icon != null) Icon(node.icon),
                   const SizedBox(width: 4),
                   Expanded(child: Text(node.label)),
                 ],

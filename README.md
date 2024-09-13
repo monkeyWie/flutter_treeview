@@ -53,9 +53,10 @@ class MyApp extends StatelessWidget {
             TreeNode(
               label: 'Root',
               value: 'root',
+              icon: Icons.folder,
               children: [
-                TreeNode<String>(label: 'Child 1', value: 'child1'),
-                TreeNode<String>(label: 'Child 2', value: 'child2'),
+                TreeNode(label: 'Child 1', value: 'child1'),
+                TreeNode(label: 'Child 2', value: 'child2'),
               ],
             ),
           ],

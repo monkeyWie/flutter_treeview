@@ -22,7 +22,7 @@ class TreeNode<T> {
   bool isPartiallySelected;
 
   /// The icon to display next to this node.
-  final IconData icon;
+  final IconData? icon;
 
   /// The list of child nodes for this node.
   final List<TreeNode<T>> children;
@@ -60,7 +60,7 @@ class TreeNode<T> {
     this.isExpanded = false,
     this.isSelected = false,
     this.isPartiallySelected = false,
-    this.icon = Icons.folder,
+    this.icon, // 移除默认值，允许传入 null
     List<TreeNode<T>>? children,
     this.parent,
     this.hidden = false,
