@@ -2,6 +2,9 @@ name: checkable_treeview
 description: A checkable and customizable tree view widget for Flutter.
 version: 1.0.0
 homepage: https://github.com/monkeyWie/flutter_treeview
+screenshots:
+  - description: "Example screenshot"
+    path: example/screenshots/example.gif
 
 environment:
   sdk: ^3.2.0
