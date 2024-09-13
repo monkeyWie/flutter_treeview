@@ -1,19 +1,27 @@
 import 'package:flutter/material.dart';
 
-import 'tree_node.dart';
-import 'treeview_state.dart';
+part 'tree_node.dart';
+part 'treeview_state.dart';
 
-/// A customizable tree view widget that displays hierarchical data.
+/// A customizable tree view widget for Flutter applications.
 ///
-/// This widget creates a tree structure from a list of [TreeNode]s and allows
-/// for selection, expansion, and collapsing of nodes. It also supports filtering
-/// and sorting of nodes.
+/// [TreeView] displays hierarchical data in a tree structure, allowing for
+/// selection, expansion, and collapse of nodes. It supports various features
+/// such as multi-selection, filtering, sorting, and customization of appearance.
 ///
-/// The [onSelectionChanged] callback is called whenever the selection state
-/// of any node changes.
+/// The widget is generic over type [T], which represents the type of value
+/// associated with each node in the tree.
 ///
-/// Example:
+/// Key features:
+/// - Hierarchical data display
+/// - Node selection (single or multi)
+/// - Expandable/collapsible nodes
+/// - Optional "Select All" functionality
+/// - Customizable node appearance
+/// - Filtering and sorting capabilities
+/// - Expand/collapse all functionality
 ///
+/// Example usage:
 /// ```dart
 /// TreeView<String>(
 ///   nodes: [
@@ -29,16 +37,6 @@ import 'treeview_state.dart';
 ///     print('Selected values: $selectedValues');
 ///   },
 /// )
-/// ```
-///
-/// Method Examples:
-///
-/// ```dart
-/// treeViewKey.currentState?.filter((node) => node.label.contains('Search'));
-/// treeViewKey.currentState?.sort((a, b) => a.label.compareTo(b.label));
-/// treeViewKey.currentState?.selectAll(true);
-/// treeViewKey.currentState?.getSelectedValues();
-/// treeViewKey.currentState?.getSelectedNodes();
 /// ```
 class TreeView<T> extends StatefulWidget {
   /// The root nodes of the tree.
@@ -72,8 +70,9 @@ class TreeView<T> extends StatefulWidget {
   ///
   /// The [selectAllWidget] can be used to provide a custom widget for the "Select All" functionality.
   ///
-  /// Use [initialExpandedLevels] to control how many levels of the tree are initially expanded, default is null, no nodes are expanded.
-  /// if set to 0, all nodes are expanded, if set to 1, only the root nodes are expanded, if set to 2, the root nodes and their direct children are expanded, and so on.
+  /// Use [initialExpandedLevels] to control how many levels of the tree are initially expanded.
+  /// If null, no nodes are expanded. If set to 0, all nodes are expanded.
+  /// If set to 1, only the root nodes are expanded, if set to 2, the root nodes and their direct children are expanded, and so on.
   ///
   /// Set [showExpandCollapseButton] to true to display a button that expands or collapses all nodes.
   const TreeView({

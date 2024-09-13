@@ -1,10 +1,10 @@
 name: checkable_treeview
 description: A checkable and customizable tree view widget for Flutter.
-version: 0.0.2
+version: 1.0.0
 homepage: https://github.com/monkeyWie/flutter_treeview
 
 environment:
-  sdk: ^3.5.2
+  sdk: ^3.2.0
   flutter: ">=1.17.0"
 
 dependencies:

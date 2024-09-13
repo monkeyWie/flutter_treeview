@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'treeview.dart';
 
 /// A node in a tree structure.
 ///
@@ -12,14 +12,8 @@ class TreeNode<T> {
   /// The label text displayed for this node.
   final String label;
 
-  /// Whether this node is currently expanded to show its children.
-  bool isExpanded;
-
-  /// Whether this node is currently selected.
-  bool isSelected;
-
-  /// Whether this node is partially selected (some children selected).
-  bool isPartiallySelected;
+  /// An optional value associated with this node.
+  final T? value;
 
   /// The icon to display next to this node.
   final IconData? icon;
@@ -27,48 +21,59 @@ class TreeNode<T> {
   /// The list of child nodes for this node.
   final List<TreeNode<T>> children;
 
-  /// The parent node of this node, or null if this is a root node.
-  TreeNode<T>? parent;
+  TreeNode<T>? _parent;
+  bool _hidden = false;
+  int _originalIndex = 0;
+  bool _isExpanded = false;
+  bool _isSelected = false;
+  bool _isPartiallySelected = false;
 
-  /// Whether this node is hidden in the tree view.
-  bool hidden;
-
-  /// The original index of this node in its parent's children list.
-  int originalIndex;
-
-  /// An optional value associated with this node.
-  final T? value;
+  TreeNode._internal({
+    required this.label,
+    this.value,
+    this.icon,
+    required this.children,
+    TreeNode<T>? parent,
+    bool hidden = false,
+    int originalIndex = 0,
+    bool isExpanded = false,
+    bool isSelected = false,
+    bool isPartiallySelected = false,
+  })  : _parent = parent,
+        _hidden = hidden,
+        _originalIndex = originalIndex,
+        _isExpanded = isExpanded,
+        _isSelected = isSelected,
+        _isPartiallySelected = isPartiallySelected {
+    for (var child in this.children) {
+      child._parent = this;
+    }
+  }
 
   /// Creates a [TreeNode].
   ///
   /// The [label] parameter is required and specifies the text to display for this node.
   ///
-  /// The [isExpanded], [isSelected], [isPartiallySelected], and [hidden] parameters
-  /// control the initial state of the node.
+  /// The [value] parameter is an optional value associated with this node.
   ///
   /// The [icon] parameter specifies the icon to display next to the node.
   ///
+  /// The [isSelected] parameter controls the initial selection state of the node.
+  ///
   /// The [children] parameter is an optional list of child nodes.
-  ///
-  /// The [parent] parameter is the parent node of this node, if any.
-  ///
-  /// The [originalIndex] parameter is used to maintain the original order of nodes.
-  ///
-  /// The [value] parameter is an optional value associated with this node.
-  TreeNode({
-    required this.label,
-    this.isExpanded = false,
-    this.isSelected = false,
-    this.isPartiallySelected = false,
-    this.icon, // 移除默认值，允许传入 null
+  factory TreeNode({
+    required String label,
+    T? value,
+    IconData? icon,
+    bool isSelected = false,
     List<TreeNode<T>>? children,
-    this.parent,
-    this.hidden = false,
-    this.originalIndex = 0,
-    this.value,
-  }) : children = children ?? [] {
-    for (var child in this.children) {
-      child.parent = this;
-    }
+  }) {
+    return TreeNode._internal(
+      label: label,
+      value: value,
+      icon: icon,
+      children: children ?? [],
+      isSelected: isSelected,
+    );
   }
 }

@@ -8,7 +8,7 @@ A checkable and customizable tree view widget for Flutter.
 
 ## Screenshot
 
-![](example/screenshots/example.gif)
+![](https://raw.githubusercontent.com/monkeyWie/flutter_treeview/main/example/screenshots/example.gif)
 
 ## Features
 

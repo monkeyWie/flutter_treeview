@@ -15,6 +15,4 @@
 /// * [TreeViewState]: Manages the state of the [TreeView] widget.
 library treeview;
 
-export 'src/tree_node.dart';
-export 'src/treeview_state.dart';
 export 'src/treeview.dart';
